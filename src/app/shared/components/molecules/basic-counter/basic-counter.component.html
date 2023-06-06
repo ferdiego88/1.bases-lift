@@ -18,10 +18,12 @@
   <div class="m-basic-counter__main-buttons">
     <app-button
     [textContent]="'+1'"
+    (clicked)="increaseAmount()"
     >
     </app-button>
     <app-button
     [textContent]="'-1'"
+    (clicked)="decreaseAmount()"
     >
     </app-button>
   </div>

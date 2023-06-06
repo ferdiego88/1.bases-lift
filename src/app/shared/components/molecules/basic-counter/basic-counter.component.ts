@@ -9,5 +9,16 @@ export class BasicCounterComponent {
 
   @Input() textContent = 'Hola Mundo';
   @Input() labelContent = 'Contador : ';
-  @Input() paragraphContent = '1';
+  @Input() paragraphContent = '0';
+  counter = 0;
+
+  increaseAmount() {
+    this.counter++;
+    this.paragraphContent = this.counter.toString();
+  }
+
+  decreaseAmount() {
+    this.counter--;
+    this.paragraphContent = this.counter.toString();
+  }
 }
