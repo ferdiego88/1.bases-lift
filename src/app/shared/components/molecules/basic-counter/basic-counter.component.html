@@ -1,14 +1,23 @@
+<section class="m-basic-counter">
+  <app-h1
+  [textContent]="textContent"
+  >
+  </app-h1>
+  <hr>
 
-<app-h1
-[textContent]="textContent"
->
-</app-h1>
-<hr>
-<app-button
-[textContent]="'+1'"
->
-</app-button>
-<app-button
-[textContent]="'-1'"
->
-</app-button>
+  <app-label
+  [labelContent]="labelContent"
+  >
+  </app-label>
+
+  <div class="m-basic-counter__main-buttons">
+    <app-button
+    [textContent]="'+1'"
+    >
+    </app-button>
+    <app-button
+    [textContent]="'-1'"
+    >
+    </app-button>
+  </div>
+</section>
