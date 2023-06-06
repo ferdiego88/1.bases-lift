@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class H1Component {
 
   @Input() className = '';
+  @Input() title = '';
 
 }

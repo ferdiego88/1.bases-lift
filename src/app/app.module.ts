@@ -5,10 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '@modules/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
