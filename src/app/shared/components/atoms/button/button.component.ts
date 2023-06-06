@@ -7,10 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ButtonComponent {
 
-  @Input() title = '';
+  @Input() textContent = '';
   @Input() typeButton = 'button';
   @Input() disabled = false;
-  @Input() className = '';
+  @Input() className = 'a-button';
   @Input() theme = '';
   @Input() icon = '';
   @Input() alt = '';

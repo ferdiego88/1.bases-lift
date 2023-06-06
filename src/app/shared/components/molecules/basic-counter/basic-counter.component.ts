@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class BasicCounterComponent {
 
-  titleMessage = 'Hola Mundo';
+  textContent = 'Hola Mundo';
 }
