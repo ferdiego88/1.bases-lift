@@ -5,11 +5,16 @@
   </app-h1>
   <hr>
 
-  <app-label
-  [labelContent]="labelContent"
-  >
-  </app-label>
-
+  <div class="m-basic-counter__main-content">
+    <app-label
+    [labelContent]="labelContent"
+    >
+    </app-label>
+    <app-paragraph
+    [paragraphContent]="paragraphContent"
+    >
+    </app-paragraph>
+  </div>
   <div class="m-basic-counter__main-buttons">
     <app-button
     [textContent]="'+1'"

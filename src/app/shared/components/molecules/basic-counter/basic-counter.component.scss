@@ -12,5 +12,11 @@
     gap: 1em;
     margin: 0;
   }
+
+  &__main-content {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
 }
 

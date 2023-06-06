@@ -9,4 +9,5 @@ export class BasicCounterComponent {
 
   @Input() textContent = 'Hola Mundo';
   @Input() labelContent = 'Contador : ';
+  @Input() paragraphContent = '1';
 }
