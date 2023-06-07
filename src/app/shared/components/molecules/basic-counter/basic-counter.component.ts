@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BasicCounterComponent {
 
-  @Input() textContent = 'Hola Mundo';
+  @Input() textContent = 'Basic Counter';
   @Input() labelContent = 'Contador : ';
   @Input() paragraphContent = '0';
   counter = 0;

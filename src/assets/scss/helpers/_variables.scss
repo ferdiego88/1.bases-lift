@@ -33,3 +33,19 @@
   $heebo-regular: "Heebo-Regular";
   $roboto-bold: "Roboto-Bold";
   $roboto-medium: "Roboto-Medium";
+
+  // Vars Colors
+:root {
+  --background-button: hsla(0, 0%, 100%, 0.05);
+  --color-primary: hsl(262, 67%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-background: hsl(262, 72%, 13%);
+  --color-line: hsl(261, 67%, 43%);
+  --purple: hsl(267, 100%, 30%);
+  --white: hsl(240, 12%, 92%);
+  --gray: hsl(0, 0%, 85%);
+  --green: hsl(162, 100%, 36%);
+  --green-shadow: hsl(162, 100%, 55%);
+  --red: hsl(346, 100%, 46%);
+  --red-shadow: hsl(346, 100%, 66%);
+}
