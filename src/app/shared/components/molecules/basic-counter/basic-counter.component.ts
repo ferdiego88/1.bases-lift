@@ -21,4 +21,10 @@ export class BasicCounterComponent {
     this.counter--;
     this.paragraphContent = this.counter.toString();
   }
+
+  resetAmount() {
+    this.counter = 0;
+    this.paragraphContent = this.counter.toString();
+  }
+
 }

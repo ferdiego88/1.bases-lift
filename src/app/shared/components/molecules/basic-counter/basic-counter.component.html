@@ -22,6 +22,11 @@
     >
     </app-button>
     <app-button
+    [textContent]="'Reset'"
+    (clicked)="resetAmount()"
+    >
+    </app-button>
+    <app-button
     [textContent]="'-1'"
     (clicked)="decreaseAmount()"
     >
