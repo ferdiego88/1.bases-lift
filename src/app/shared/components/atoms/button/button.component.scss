@@ -1,3 +1,17 @@
 .a-button {
  width: 100%;
+ background-color: var(--color-primary);
+ border-radius: 0.5rem;
+ border: 0;
+ padding: .8125rem 2rem;
+ color: var(--color-white);
+
+ font: {
+  weight: 600;
+  size: 1.25rem;
+ }
+
+ &:hover {
+  cursor: pointer;
+ }
 }

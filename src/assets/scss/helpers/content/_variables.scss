@@ -37,7 +37,7 @@
   // Vars Colors
 :root {
   --background-button: hsla(0, 0%, 100%, 0.05);
-  --color-primary: hsl(262, 67%, 48%);
+  --color-primary: hsl(260, 94%, 57%);
   --color-white: hsl(0, 0%, 100%);
   --color-background: hsl(262, 72%, 13%);
   --color-line: hsl(261, 67%, 43%);
@@ -48,4 +48,10 @@
   --green-shadow: hsl(162, 100%, 55%);
   --red: hsl(346, 100%, 46%);
   --red-shadow: hsl(346, 100%, 66%);
+  --font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --body-bg-rgb: 255,255,255;
+  --primary-rgb: 13,110,253;
+  --accent-rgb: 255,228,132;
+  --violet-rgb: 112.520718,44.062154,249.437846;
+  --pink-rgb: 214,51,132;
 }
