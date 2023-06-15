@@ -8,4 +8,9 @@ import { Component, Input } from '@angular/core';
 export class HeroeListComponent {
 
   @Input() heroNames: string[] = ['Spiderman'];
+  deletedHero? = '';
+
+  removeLastHero(): void {
+    this.deletedHero = this.heroNames.pop();
+  }
 }
