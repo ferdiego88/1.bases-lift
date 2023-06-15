@@ -1,0 +1,31 @@
+<section class="m-heroe-dl">
+  <app-h1
+  [textContent]="textContent"
+  ></app-h1>
+  <hr>
+  <dl class="m-heroe-dl__card">
+    <dt>Nombre: </dt>
+    <dd> {{ name }} </dd>
+
+    <dt>Edad:</dt>
+    <dd> {{ age }} </dd>
+
+    <dt>Método</dt>
+    <dd>metodo</dd>
+
+    <dt>Capitalizado</dt>
+    <dd>nombre</dd>
+  </dl>
+
+  <div class="m-heroe-dl__main-buttons">
+    <app-button
+    [textContent]="'Cambiar Nombre'"
+    >
+    </app-button>
+
+    <app-button
+    [textContent]="'Cambiar Edad'"
+    >
+    </app-button>
+  </div>
+</section>

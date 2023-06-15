@@ -1,0 +1,18 @@
+.m-heroe-dl {
+  display: block;
+  margin: 2rem auto;
+  width: 50%;
+  box-sizing: border-box;
+  max-width: 1920px;
+
+  &__card {
+    font-size: 1.5rem;
+  }
+
+  &__main-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 1rem 0;
+  }
+}
