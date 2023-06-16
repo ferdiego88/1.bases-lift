@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
-import { charactersMock } from '@app/core/mocks/character.mock';
+import { CharactersService } from '@app/core/services/characters/characters.service';
 
 @Component({
   selector: 'app-main-page',
@@ -9,15 +9,20 @@ import { charactersMock } from '@app/core/mocks/character.mock';
 })
 export class MainPageComponent {
 
-  title = 'Personajes de Dragon Ball Z';
+title = 'Personajes de Dragon Ball Z';
+ characters: Character[];
 
-  @Input() characters: Character[] = charactersMock;
+  constructor(private characterService: CharactersService) {
+    this.characters = this.characterService.characters;
+  }
+
+
 
    addCharacter(character:Character) {
-    this.characters.push(character);
+    this.characterService.addCharacter(character);
    }
 
    deleteCharacter(idx: number) {
-     this.characters.splice(idx,1);
+     this.characterService.deleteCharacter(idx);
    }
 }
