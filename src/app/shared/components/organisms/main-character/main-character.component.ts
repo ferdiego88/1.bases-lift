@@ -10,4 +10,9 @@ export class MainCharacterComponent {
 
   @Input() title = '';
   @Input() characters: Character[] = [];
+
+
+  onNewCharacter(character: Character):void {
+    console.log(character);
+  }
 }
