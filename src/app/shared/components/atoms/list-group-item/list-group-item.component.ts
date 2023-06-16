@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '@app/modules/dragon-ball-z/interfaces/character.interface';
 
 @Component({
@@ -10,4 +10,11 @@ export class ListGroupItemComponent {
 
   @Input() listTitle = '';
   @Input() characters: Character[] = [];
+  @Output() idx: EventEmitter<number> = new EventEmitter();
+
+
+onDeleteCharacter(index: number): void {
+  this.idx.emit(index);
+}
+
 }

@@ -8,6 +8,7 @@
     <app-list-group-item
     [listTitle]="'Listado de Personajes'"
     [characters]="characters"
+    (idx)="emitIdx($event)"
     >
     </app-list-group-item>
   </div>
