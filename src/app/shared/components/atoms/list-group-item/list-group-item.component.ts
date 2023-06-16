@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Character } from '@app/modules/dragon-ball-z/interfaces/character.interface';
 
 @Component({
   selector: 'app-list-group-item',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ListGroupItemComponent {
 
+  @Input() listTitle = '';
+  @Input() characters: Character[] = [];
 }

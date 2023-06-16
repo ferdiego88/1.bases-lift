@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AtomsModule } from '../atoms/atoms.module';
 import { BasicCounterComponent } from './basic-counter/basic-counter.component';
@@ -20,6 +21,8 @@ const moleculesComponent = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AtomsModule,
   ],
   exports: [

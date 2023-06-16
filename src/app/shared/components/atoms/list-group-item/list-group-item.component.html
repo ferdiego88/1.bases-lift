@@ -1,4 +1,8 @@
+<div class="a-list-group-item__title">
+  <h4> {{listTitle}} </h4>
+</div>
 <ul class="list-group">
-  <li class="list-group-item">Krillin - 500</li>
-  <li class="list-group-item">Gokú - 10.000</li>
+  <li *ngFor="let character of characters" class="list-group-item">
+    {{ character.name}} -
+    <strong>Power:</strong> {{character.power }}</li>
 </ul>

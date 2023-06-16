@@ -5,7 +5,11 @@
 <hr>
 <div class="row">
   <div class="col">
-    <app-list-group-item></app-list-group-item>
+    <app-list-group-item
+    [listTitle]="'Listado de Personajes'"
+    [characters]="characters"
+    >
+    </app-list-group-item>
   </div>
   <div class="col">
     <app-form-character

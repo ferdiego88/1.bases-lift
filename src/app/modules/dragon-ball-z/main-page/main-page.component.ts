@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Character } from '../interfaces/character.interface';
+import { charactersMock } from '@app/core/mocks/character.mock';
 
 @Component({
   selector: 'app-main-page',
@@ -8,4 +10,7 @@ import { Component } from '@angular/core';
 export class MainPageComponent {
 
   title = 'Personajes de Dragon Ball Z';
+
+  @Input() characters: Character[] = charactersMock;
+
 }

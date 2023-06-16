@@ -5,11 +5,13 @@
 </div>
 <form
 [ngClass]="className"
+[formGroup]="formCharacter"
 >
   <app-input
   [inputType]="'text'"
   [placeholder]="'Nombre'"
   [className]="'form-control mb-2'"
+  [control]="getControl('name')"
   >
   </app-input>
 
@@ -17,6 +19,7 @@
   [inputType]="'number'"
   [placeholder]="'Poder'"
   [className]="'form-control mb-2'"
+  [control]="getControl('power')"
   >
   </app-input>
 
