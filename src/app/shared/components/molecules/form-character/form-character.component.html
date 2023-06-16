@@ -1,20 +1,28 @@
-<form>
+<div class="m-form-character__title">
+  <h4>
+    {{titleForm}}
+  </h4>
+</div>
+<form
+[ngClass]="className"
+>
   <app-input
   [inputType]="'text'"
   [placeholder]="'Nombre'"
+  [className]="'form-control mb-2'"
   >
   </app-input>
 
   <app-input
   [inputType]="'number'"
   [placeholder]="'Poder'"
+  [className]="'form-control mb-2'"
   >
   </app-input>
 
   <app-button
   [textContent]="'Agregar'"
   [typeButton]="'submit'"
-  [className]="'btn btn-primary'"
   >
   </app-button>
 </form>

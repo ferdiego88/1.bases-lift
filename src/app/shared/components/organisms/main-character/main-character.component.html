@@ -3,12 +3,15 @@
 >
 </app-h1>
 <hr>
-
 <div class="row">
   <div class="col">
     <app-list-group-item></app-list-group-item>
   </div>
   <div class="col">
-    <app-form-character></app-form-character>
+    <app-form-character
+    [className]="'row'"
+    [titleForm]="'Agregar Personaje'"
+    >
+    </app-form-character>
   </div>
 </div>
