@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input,Output } from '@angular/core';
 import { Character } from '@app/modules/dragon-ball-z/interfaces/character.interface';
 
 @Component({
@@ -10,9 +10,10 @@ export class MainCharacterComponent {
 
   @Input() title = '';
   @Input() characters: Character[] = [];
+  @Output() newCharacter: EventEmitter<Character> = new EventEmitter();
 
 
   onNewCharacter(character: Character):void {
-    console.log(character);
+    this.newCharacter.emit(character);
   }
 }

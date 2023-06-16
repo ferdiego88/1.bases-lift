@@ -13,4 +13,7 @@ export class MainPageComponent {
 
   @Input() characters: Character[] = charactersMock;
 
+   addCharacter(character:Character) {
+    this.characters.push(character);
+   }
 }
