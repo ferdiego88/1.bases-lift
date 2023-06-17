@@ -10,19 +10,15 @@ import { CharactersService } from '@app/core/services/characters/characters.serv
 export class MainPageComponent {
 
 title = 'Personajes de Dragon Ball Z';
- characters: Character[];
 
-  constructor(private characterService: CharactersService) {
-    this.characters = this.characterService.characters;
+  constructor(public characterService: CharactersService) {
   }
-
-
 
    addCharacter(character:Character) {
     this.characterService.addCharacter(character);
    }
 
-   deleteCharacter(idx: number) {
-     this.characterService.deleteCharacter(idx);
+   deleteCharacter(uuid: string) {
+     this.characterService.deleteCharacter(uuid);
    }
 }

@@ -10,11 +10,11 @@ export class ListGroupItemComponent {
 
   @Input() listTitle = '';
   @Input() characters: Character[] = [];
-  @Output() idx: EventEmitter<number> = new EventEmitter();
+  @Output() idx: EventEmitter<string> = new EventEmitter();
 
 
-onDeleteCharacter(index: number): void {
-  this.idx.emit(index);
+onDeleteCharacter(uuid: string): void {
+  this.idx.emit(uuid);
 }
 
 }

@@ -11,15 +11,15 @@ export class MainCharacterComponent {
   @Input() title = '';
   @Input() characters: Character[] = [];
   @Output() newCharacter: EventEmitter<Character> = new EventEmitter();
-  @Output() OnIdx: EventEmitter<number> = new EventEmitter();
+  @Output() OnIdx: EventEmitter<string> = new EventEmitter();
 
 
   onNewCharacter(character: Character):void {
     this.newCharacter.emit(character);
   }
 
-  emitIdx(idx: number) {
-    this.OnIdx.emit(idx);
+  emitIdx(uuid: string) {
+    this.OnIdx.emit(uuid);
   }
 
 }

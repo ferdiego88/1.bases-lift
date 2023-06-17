@@ -8,7 +8,7 @@ import { v4 as uuid } from 'uuid';
 })
 export class CharactersService {
 
-  characters: Character[] = charactersMock;
+  public characters: Character[] = charactersMock;
 
 
   addCharacter(character: Character): void {
@@ -16,8 +16,9 @@ export class CharactersService {
     this.characters.push(newCharacter);
   }
 
-  deleteCharacter(idx: number): void {
-    this.characters.splice(idx, 1);
+  deleteCharacter(id: string): void {
+    this.characters = this.characters.filter(character => character.id !== id);
+    console.log(this.characters);
   }
 
 }
