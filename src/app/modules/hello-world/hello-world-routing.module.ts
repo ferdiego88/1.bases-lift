@@ -4,6 +4,7 @@ import { CounterComponent } from './components/counter/counter.component';
 
 const routes: Routes = [
   {path: 'hola-mundo', component: CounterComponent},
+  {path: '', redirectTo: 'hola-mundo', pathMatch: 'full' }
 ];
 
 @NgModule({
