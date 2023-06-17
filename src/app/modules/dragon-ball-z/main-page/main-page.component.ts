@@ -11,14 +11,18 @@ export class MainPageComponent {
 
 title = 'Personajes de Dragon Ball Z';
 
-  constructor(public characterService: CharactersService) {
+  constructor(private characterService: CharactersService) {
   }
 
-   addCharacter(character:Character) {
+  get characters(): Character[] {
+    return [...this.characterService.characters];
+  }
+
+   onNewCharacter(character:Character) {
     this.characterService.addCharacter(character);
    }
 
-   deleteCharacter(uuid: string) {
+   onDeleteCharacter(uuid: string) {
      this.characterService.deleteCharacter(uuid);
    }
 }

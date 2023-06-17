@@ -1,7 +1,7 @@
 <app-main-character
 [title]="title"
-[characters]="characterService.characters"
-(newCharacter)="addCharacter($event)"
-(OnIdx)="deleteCharacter($event)"
+[characters]="characters"
+(newCharacter)="onNewCharacter($event)"
+(OnIdx)="onDeleteCharacter($event)"
 >
 </app-main-character>
