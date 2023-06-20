@@ -8,6 +8,7 @@ import { HeroeDlComponent } from './heroe-dl/heroe-dl.component';
 import { HeroeListComponent } from './heroe-list/heroe-list.component';
 import { FormCharacterComponent } from './form-character/form-character.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 const moleculesComponent = [
   BasicCounterComponent,
@@ -15,6 +16,7 @@ const moleculesComponent = [
   HeroeListComponent,
   FormCharacterComponent,
   SidebarComponent,
+  SearchBoxComponent,
 ]
 
 @NgModule({
