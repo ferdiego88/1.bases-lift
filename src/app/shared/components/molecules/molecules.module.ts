@@ -9,6 +9,7 @@ import { HeroeListComponent } from './heroe-list/heroe-list.component';
 import { FormCharacterComponent } from './form-character/form-character.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { CardListComponent } from './card-list/card-list.component';
 
 const moleculesComponent = [
   BasicCounterComponent,
@@ -17,6 +18,7 @@ const moleculesComponent = [
   FormCharacterComponent,
   SidebarComponent,
   SearchBoxComponent,
+  CardListComponent,
 ]
 
 @NgModule({

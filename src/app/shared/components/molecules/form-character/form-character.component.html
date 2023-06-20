@@ -7,21 +7,21 @@
 [ngClass]="className"
 [formGroup]="formCharacter"
 >
-  <app-input
+  <app-input-form-control
   [inputType]="'text'"
   [placeholder]="'Nombre'"
   [className]="'form-control mb-2'"
   [control]="getControl('name')"
   >
-  </app-input>
+  </app-input-form-control>
 
-  <app-input
+  <app-input-form-control
   [inputType]="'number'"
   [placeholder]="'Poder'"
   [className]="'form-control mb-2'"
   [control]="getControl('power')"
   >
-  </app-input>
+  </app-input-form-control>
 
   <app-button
   [textContent]="'Agregar'"

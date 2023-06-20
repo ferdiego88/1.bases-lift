@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, AbstractControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  selector: 'app-input-form-control',
+  templateUrl: './input-form-control.component.html',
+  styleUrls: ['./input-form-control.component.scss']
 })
-export class InputComponent {
+export class InputFormControlComponent {
   isInputEmpty = true;
   @Input() placeholder = '';
   @Input() inputType = '';
@@ -16,8 +16,4 @@ export class InputComponent {
   @Input() isDisabled = false;
   @Input() readOnly = '';
   @Input() control!: FormControl;
-
-
-
-
 }
