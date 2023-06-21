@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SearchBoxComponent {
 
+  searchTag (tag: string):void {
+    console.log(tag)
+  }
 }
+

@@ -1,8 +1,10 @@
 <input
+#txtTagInput
 [placeholder]="placeholder"
 [type]="inputType"
 [name]="inputName"
 [ngClass]="className"
 [disabled]="isDisabled"
 [readOnly]="readOnly"
+(keyup.enter)="onKeyUpEnter()"
 />

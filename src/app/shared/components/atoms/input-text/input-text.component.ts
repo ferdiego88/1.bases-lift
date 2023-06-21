@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-input-text',
@@ -14,4 +14,16 @@ export class InputTextComponent {
   @Input() className = '';
   @Input() isDisabled = false;
   @Input() readOnly = '';
+
+  @Output() keyUpEnter = new EventEmitter<string>();
+
+  @ViewChild('txtTagInput')
+  tagInput!: ElementRef<HTMLInputElement>;
+
+
+
+  public onKeyUpEnter () {
+    this.keyUpEnter.emit(this.tagInput.nativeElement.value);
+  }
+
 }
