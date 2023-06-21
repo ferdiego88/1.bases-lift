@@ -7,6 +7,7 @@ import { MoleculesModule } from '@app/shared/components/molecules/molecules.modu
 import { GifsHomePageComponent } from './pages/gifs-home-page/gifs-home-page.component';
 import { GifsSearchBoxComponent } from './components/gifs-search-box/gifs-search-box.component';
 import { GifsSidebarComponent } from './components/gifs-sidebar/gifs-sidebar.component';
+import { GifsListComponent } from './components/gifs-list/gifs-list.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { GifsSidebarComponent } from './components/gifs-sidebar/gifs-sidebar.com
     GifsHomePageComponent,
     GifsSearchBoxComponent,
     GifsSidebarComponent,
+    GifsListComponent,
   ],
   imports: [
     CommonModule,

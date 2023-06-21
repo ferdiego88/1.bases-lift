@@ -1,4 +1,9 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'environments/environment';
+import { map } from 'rxjs/operators';
+import { Gifs } from '../../../shared/interfaces/gifs';
+import { HttpGifsService } from '@app/shared/services/gifs-service/http-gifs.service';
 
 @Injectable({
   providedIn: 'root'
@@ -6,13 +11,41 @@ import { Injectable } from '@angular/core';
 export class GifsService {
 
   private _tagsHistory: string[] = [];
+  private _gifs: Gifs[] = [];
+
+
+  constructor(private httpGifsService: HttpGifsService) {
+
+  }
+
+  private organizeHistory(tag: string) {
+     tag = tag.toLowerCase();
+
+     if (this._tagsHistory.includes(tag)) {
+        this._tagsHistory = this._tagsHistory.filter( (oldTag) => oldTag !== tag);
+     }
+
+    this._tagsHistory.unshift(tag);
+     this._tagsHistory = this._tagsHistory.splice(0,10);
+  }
 
   get tagsHistory() {
     return [...this._tagsHistory];
   }
 
-  searchTag(tag: string):void {
-    this._tagsHistory.unshift(tag);
+  get gifs() {
+    return [...this._gifs];
   }
+
+  searchTag(tag: string):void {
+    if (tag.length === 0) return;
+    this.organizeHistory(tag);
+    this.httpGifsService.getGifs(tag)
+    .subscribe((gifs) => {
+      this._gifs = gifs;
+    })
+  }
+
+
 
 }

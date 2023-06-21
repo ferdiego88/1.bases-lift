@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Gifs } from '@app/shared/interfaces/gifs';
 
 @Component({
   selector: 'app-card-list',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class CardListComponent {
 
+@Input() gifs: Gifs[] = [];
 }

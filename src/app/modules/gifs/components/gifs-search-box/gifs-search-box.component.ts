@@ -13,7 +13,6 @@ export class GifsSearchBoxComponent {
   }
 
   searchGifs(tag: string) {
-    console.log(tag);
     this.gifsService.searchTag(tag);
   }
 }
