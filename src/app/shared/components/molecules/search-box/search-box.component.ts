@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search-box',
@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SearchBoxComponent {
 
+  @Output() OnTextInput = new EventEmitter<string>();
+
   searchTag (tag: string):void {
-    console.log(tag)
+    this.OnTextInput.emit(tag);
   }
 }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GifsService } from '@app/core/services/gifs/gifs.service';
 
 @Component({
   selector: 'app-gifs-search-box',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class GifsSearchBoxComponent {
 
+  constructor(private gifsService: GifsService) {
+
+  }
+
+  searchGifs(tag: string) {
+    console.log(tag);
+    this.gifsService.searchTag(tag);
+  }
 }

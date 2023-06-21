@@ -24,6 +24,7 @@ export class InputTextComponent {
 
   public onKeyUpEnter () {
     this.keyUpEnter.emit(this.tagInput.nativeElement.value);
+    this.tagInput.nativeElement.value = '';
   }
 
 }

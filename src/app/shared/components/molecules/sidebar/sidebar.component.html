@@ -4,9 +4,9 @@
   [className]="'text-light'"
   ></app-h3>
   <hr class="text-white">
-  <div class="list-group list-reset">
+  <div *ngFor="let tag of tags" class="list-group list-reset mb-2">
       <app-button
-      [textContent]="'Valorant'"
+      [textContent]="tag"
       >
       </app-button>
   </div>
