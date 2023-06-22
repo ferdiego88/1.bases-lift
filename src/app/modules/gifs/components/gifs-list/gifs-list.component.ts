@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '@app/core/services/gifs/gifs.service';
+import { Gifs } from '@app/shared/interfaces/gifs';
 
 @Component({
   selector: 'app-gifs-list',
@@ -12,7 +13,7 @@ export class GifsListComponent {
 
   }
 
-  get gifs() {
+  get gifs(): Gifs[] {
     return this.gifsService.gifs;
   }
 }

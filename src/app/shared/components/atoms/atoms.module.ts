@@ -11,6 +11,7 @@ import { ListGroupItemComponent } from './list-group-item/list-group-item.compon
 import { H3Component } from './h3/h3.component';
 import { H5Component } from './h5/h5.component';
 import { InputTextComponent } from './input-text/input-text.component';
+import { ImageCardComponent } from './image-card/image-card.component';
 
 const atomsComponents = [
   ButtonComponent,
@@ -22,6 +23,7 @@ const atomsComponents = [
   H3Component,
   H5Component,
   InputTextComponent,
+  ImageCardComponent,
 ]
 
 @NgModule({

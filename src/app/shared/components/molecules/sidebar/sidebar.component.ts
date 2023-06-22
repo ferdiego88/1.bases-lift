@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Input,Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,4 +8,10 @@ import { Component,Input } from '@angular/core';
 export class SidebarComponent {
 
   @Input() tags:string[] = [];
+
+  @Output() tag = new EventEmitter<string>();
+
+  OnSelectedTag(tag:string ) {
+    this.tag.emit(tag);
+  }
 }
