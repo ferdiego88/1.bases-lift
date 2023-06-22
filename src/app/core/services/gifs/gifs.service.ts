@@ -13,7 +13,9 @@ export class GifsService {
 
   constructor(private httpGifsService: HttpGifsService) {
     this.loadGifsLocalStorage();
-    this.searchTag(this._tagsHistory[0]);
+    if (this._tagsHistory.length != 0) {
+      this.searchTag(this._tagsHistory[0]);
+    }
   }
 
   private saveGifsLocalStorage():void {
