@@ -14,6 +14,5 @@ public hasLoaded = false;
 
 onload() {
   this.hasLoaded = true;
-  console.log('Loaded');
 }
 }

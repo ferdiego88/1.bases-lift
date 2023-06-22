@@ -9,7 +9,7 @@
         <app-image-card
         [src]="gif.images.downsized_medium.url"
         [alt]="gif.title"
-        [className]="'card-img-top'"
+        [className]="'card-img-top animate__animated animate__fadeIn'"
         (hasLoaded)="onload()"
         [style]="{display: hasLoaded ? '': 'none'}"
         >
