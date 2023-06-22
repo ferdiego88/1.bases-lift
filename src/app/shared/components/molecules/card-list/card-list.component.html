@@ -11,6 +11,7 @@
         [alt]="gif.title"
         [className]="'card-img-top'"
         (hasLoaded)="onload()"
+        [style]="{display: hasLoaded ? '': 'none'}"
         >
         </app-image-card>
         <div class="card-body text-white">

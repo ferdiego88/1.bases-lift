@@ -10,6 +10,7 @@ export class ImageCardComponent {
   @Input() src = '';
   @Input() alt = '';
   @Input() className = '';
+  @Input() style = {};
   @Output() hasLoaded = new EventEmitter<void>();
 
   public loaded() {
