@@ -12,6 +12,7 @@ import { H3Component } from './h3/h3.component';
 import { H5Component } from './h5/h5.component';
 import { InputTextComponent } from './input-text/input-text.component';
 import { ImageCardComponent } from './image-card/image-card.component';
+import { LoaderRingComponent } from './loader-ring/loader-ring.component';
 
 const atomsComponents = [
   ButtonComponent,
@@ -24,6 +25,7 @@ const atomsComponents = [
   H5Component,
   InputTextComponent,
   ImageCardComponent,
+  LoaderRingComponent,
 ]
 
 @NgModule({

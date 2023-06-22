@@ -9,4 +9,11 @@ import { Gifs } from '@app/shared/interfaces/gifs';
 export class CardListComponent {
 
 @Input() gifs: Gifs[] = [];
+
+public hasLoaded = false;
+
+onload() {
+  this.hasLoaded = true;
+  console.log('Loaded');
+}
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-image-card',
@@ -10,4 +10,9 @@ export class ImageCardComponent {
   @Input() src = '';
   @Input() alt = '';
   @Input() className = '';
+  @Output() hasLoaded = new EventEmitter<void>();
+
+  public loaded() {
+    this.hasLoaded.emit();
+  }
 }
