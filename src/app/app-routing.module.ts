@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import('./modules/hello-world/hello-world.module').then(m => m.HelloWorldModule) },
   { path: 'dragon-ball-z', loadChildren: () => import('./modules/dragon-ball-z/dragon-ball-z.module').then(m => m.DragonBallZModule) },
   { path: 'gifs', loadChildren: () => import('./modules/gifs/gifs.module').then(m => m.GifsModule) },
+  { path: 'countries', loadChildren: () => import('./modules/countries/countries.module').then(m => m.CountriesModule) },
 ];
 
 @NgModule({
