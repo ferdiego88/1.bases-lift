@@ -10,15 +10,18 @@ import { FormCharacterComponent } from './form-character/form-character.componen
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CardListComponent } from './card-list/card-list.component';
+import { RouterModule } from '@angular/router';
+import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 
 const moleculesComponent = [
   BasicCounterComponent,
   HeroeDlComponent,
   HeroeListComponent,
+  CardListComponent,
   FormCharacterComponent,
   SidebarComponent,
+  SidebarNavComponent,
   SearchBoxComponent,
-  CardListComponent,
 ]
 
 @NgModule({
@@ -28,6 +31,7 @@ const moleculesComponent = [
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     AtomsModule,
   ],

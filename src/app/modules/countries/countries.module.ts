@@ -6,13 +6,15 @@ import { CountriesHomePageComponent } from './pages/countries-home-page/countrie
 import { CountriesAboutComponent } from './pages/countries-about/countries-about.component';
 import { CountriesMainComponent } from './pages/countries-main/countries-main.component';
 import { MoleculesModule } from '@app/shared/components/molecules/molecules.module';
+import { CountriesContactComponent } from './pages/countries-contact/countries-contact.component';
 
 
 @NgModule({
   declarations: [
   CountriesHomePageComponent,
   CountriesAboutComponent,
-  CountriesMainComponent
+  CountriesMainComponent,
+  CountriesContactComponent
   ],
   imports: [
     CommonModule,

@@ -7,6 +7,8 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
 })
 export class SidebarComponent {
 
+  @Input() title ='';
+
   @Input() tags:string[] = [];
 
   @Output() tag = new EventEmitter<string>();

@@ -1,0 +1,12 @@
+<div class="m-sidebar-nav bg-dark border-right p-3">
+  <app-h3
+  [textContent]="title"
+  [className]="'text-light'"
+  ></app-h3>
+  <hr class="text-white">
+  <ul class="list-group">
+    <li *ngFor="let path of paths" class="list-group-item" [routerLink]="path.route" routerLinkActive="active"> {{path.name}} </li>
+    <!-- <li routerLink="/countries/main/home" routerLinkActive="active" class="list-group-item">Home</li>
+    <li routerLink="/countries/main/about" routerLinkActive="active" class="list-group-item">About</li> -->
+  </ul>
+</div>
