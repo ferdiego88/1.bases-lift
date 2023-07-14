@@ -11,9 +11,9 @@ export class CountriesMainComponent implements OnInit {
   basePath = '/countries/main';
 
   paths: Paths[] = [
-    {name: 'Home',route: `${this.basePath}/home`},
-    {name: 'About',route: `${this.basePath}/about`},
-    {name: 'Contact',route: `${this.basePath}/contact`},
+    {name: 'Por Capital',route: `${this.basePath}/by-capital`},
+    {name: 'Por País',route: `${this.basePath}/by-country`},
+    {name: 'Por Región',route: `${this.basePath}/by-region`},
   ];
 
 
