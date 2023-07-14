@@ -7,6 +7,10 @@ import { CountriesAboutComponent } from './pages/countries-about/countries-about
 import { CountriesMainComponent } from './pages/countries-main/countries-main.component';
 import { MoleculesModule } from '@app/shared/components/molecules/molecules.module';
 import { CountriesContactComponent } from './pages/countries-contact/countries-contact.component';
+import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
+import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
+import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
+import { CountryPageComponent } from './pages/country-page/country-page.component';
 
 
 @NgModule({
@@ -14,7 +18,11 @@ import { CountriesContactComponent } from './pages/countries-contact/countries-c
   CountriesHomePageComponent,
   CountriesAboutComponent,
   CountriesMainComponent,
-  CountriesContactComponent
+  CountriesContactComponent,
+  ByCapitalPageComponent,
+  ByCountryPageComponent,
+  ByRegionPageComponent,
+  CountryPageComponent
   ],
   imports: [
     CommonModule,

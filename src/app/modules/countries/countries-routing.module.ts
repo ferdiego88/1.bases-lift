@@ -4,13 +4,21 @@ import { CountriesMainComponent } from './pages/countries-main/countries-main.co
 import { CountriesHomePageComponent } from './pages/countries-home-page/countries-home-page.component';
 import { CountriesAboutComponent } from './pages/countries-about/countries-about.component';
 import { CountriesContactComponent } from './pages/countries-contact/countries-contact.component';
+import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
+import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
+import { ByRegionPageComponent } from './pages/by-region-page/by-region-page.component';
+import { CountryPageComponent } from './pages/country-page/country-page.component';
 
 const routes: Routes = [
   { path: 'main', component: CountriesMainComponent,
     children: [
-      { path:'home', component: CountriesHomePageComponent },
-      { path:'about', component: CountriesAboutComponent },
+      { path:'home',    component: CountriesHomePageComponent },
+      { path:'about',   component: CountriesAboutComponent },
       { path:'contact', component: CountriesContactComponent },
+      { path:'by-capital', component: ByCapitalPageComponent },
+      { path:'by-country', component: ByCountryPageComponent },
+      { path:'by-region',  component: ByRegionPageComponent },
+      { path:'by/:id',  component: CountryPageComponent },
     ]
   },
 ];
