@@ -6,7 +6,7 @@ import { Paths } from '../../interfaces/paths.interface';
   templateUrl: './countries-main.component.html',
   styleUrls: ['./countries-main.component.scss']
 })
-export class CountriesMainComponent implements OnInit {
+export class CountriesMainComponent  {
 
   basePath = '/countries/main';
 
@@ -15,11 +15,5 @@ export class CountriesMainComponent implements OnInit {
     {name: 'Por País',route: `${this.basePath}/by-country`},
     {name: 'Por Región',route: `${this.basePath}/by-region`},
   ];
-
-
-  ngOnInit(): void {
-    console.log(this.paths);
-  }
-
 
 }
