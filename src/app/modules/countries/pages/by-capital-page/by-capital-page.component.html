@@ -1,21 +1,22 @@
-<h2>Por Capital</h2>
+<app-h2
+[textContent]="'Por Capital'"
+>
+</app-h2>
 <hr>
 <div class="row">
   <div class="col">
-
     <app-search-box
-    [placeholder]="'Buscar País...'"
+    [placeholder]="'Buscar Capital...'"
     (OnTextInput)="searchByCapital($event)"
     >
-
     </app-search-box>
-
   </div>
 </div>
 <div class="row">
   <div class="col">
     <hr>
       <app-country-table
+      [captionTable]="'Capital'"
       [countries]="countries"
       >
       </app-country-table>

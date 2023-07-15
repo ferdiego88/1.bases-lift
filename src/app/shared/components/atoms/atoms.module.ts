@@ -13,24 +13,27 @@ import { H5Component } from './h5/h5.component';
 import { InputTextComponent } from './input-text/input-text.component';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { LoaderRingComponent } from './loader-ring/loader-ring.component';
+import { H2Component } from './h2/h2.component';
 
 const atomsComponents = [
   ButtonComponent,
-  InputFormControlComponent,
   H1Component,
-  LabelComponent,
-  ParagraphComponent,
-  ListGroupItemComponent,
+  H2Component,
   H3Component,
   H5Component,
-  InputTextComponent,
   ImageCardComponent,
+  InputTextComponent,
+  InputFormControlComponent,
+  ParagraphComponent,
+  LabelComponent,
+  ListGroupItemComponent,
   LoaderRingComponent,
 ]
 
 @NgModule({
   declarations: [
     ...atomsComponents,
+
   ],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule

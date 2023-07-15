@@ -11,16 +11,17 @@ export class ByCapitalPageComponent {
 
   public countries: Country[] = [];
 
+  typeSearch = 'capital';
+
   constructor(private countriesService: CountriesService) {
 
   }
 
   searchByCapital(termino: string) {
-    this.countriesService.searchCapital(termino)
+    this.countriesService.searchCountry(termino, this.typeSearch)
       .subscribe(countries => {
         this.countries = countries;
         console.log(countries);
-
       })
   }
 }

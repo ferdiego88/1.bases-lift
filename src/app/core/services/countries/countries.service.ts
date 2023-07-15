@@ -14,8 +14,8 @@ private baseUrl = environment.BASE_COUNTRY_URL;
 
   }
 
-  searchCapital(term: string): Observable<Country[]> {
-    return this.httpClient.get<Country[]>(`${this.baseUrl}/capital/${term}`)
+  searchCountry(term: string, type: string): Observable<Country[]> {
+    return this.httpClient.get<Country[]>(`${this.baseUrl}/${type}/${term}`)
       .pipe(
        catchError( error => {
         console.log(error);
