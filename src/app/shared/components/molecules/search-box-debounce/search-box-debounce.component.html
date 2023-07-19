@@ -1,0 +1,11 @@
+<app-h5
+[textContent]="'Buscar: '"
+>
+</app-h5>
+<app-input-debounce-text
+[className]="'form-control'"
+[placeholder]="placeholder"
+(keyPress)="searchTerm($event)"
+>
+
+</app-input-debounce-text>

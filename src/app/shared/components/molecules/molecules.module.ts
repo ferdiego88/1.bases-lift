@@ -12,6 +12,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { RouterModule } from '@angular/router';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
+import { SearchBoxDebounceComponent } from './search-box-debounce/search-box-debounce.component';
 
 const moleculesComponent = [
   BasicCounterComponent,
@@ -22,6 +23,7 @@ const moleculesComponent = [
   SidebarComponent,
   SidebarNavComponent,
   SearchBoxComponent,
+  SearchBoxDebounceComponent,
 ]
 
 @NgModule({

@@ -5,11 +5,11 @@
 <hr>
 <div class="row">
   <div class="col">
-    <app-search-box
-    [placeholder]="'Buscar Capital...'"
-    (OnTextInput)="searchByCapital($event)"
-    >
-    </app-search-box>
+   <app-search-box-debounce
+   [placeholder]="'Buscar Capital...'"
+   (OnTextDebounceInput)="searchByCapital($event)"
+   >
+  </app-search-box-debounce>
   </div>
 </div>
 <div class="row">

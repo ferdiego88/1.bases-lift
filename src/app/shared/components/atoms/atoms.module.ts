@@ -15,6 +15,7 @@ import { ImageCardComponent } from './image-card/image-card.component';
 import { LoaderRingComponent } from './loader-ring/loader-ring.component';
 import { H2Component } from './h2/h2.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { InputDebounceTextComponent } from './input-debounce-text/input-debounce-text.component';
 
 const atomsComponents = [
   ButtonComponent,
@@ -24,6 +25,7 @@ const atomsComponents = [
   H5Component,
   ImageCardComponent,
   InputTextComponent,
+  InputDebounceTextComponent,
   InputFormControlComponent,
   ParagraphComponent,
   LabelComponent,
@@ -35,7 +37,6 @@ const atomsComponents = [
 @NgModule({
   declarations: [
     ...atomsComponents,
-
   ],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule
