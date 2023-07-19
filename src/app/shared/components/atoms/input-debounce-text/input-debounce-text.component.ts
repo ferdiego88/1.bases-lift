@@ -24,8 +24,6 @@ export class InputDebounceTextComponent {
 
   public onKeyPress () {
     this.keyPress.emit(this.tagInput.nativeElement.value);
-    //console.log(this.tagInput.nativeElement.value);
-    //this.tagInput.nativeElement.value = '';
   }
 
 }
