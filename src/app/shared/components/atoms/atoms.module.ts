@@ -14,6 +14,7 @@ import { InputTextComponent } from './input-text/input-text.component';
 import { ImageCardComponent } from './image-card/image-card.component';
 import { LoaderRingComponent } from './loader-ring/loader-ring.component';
 import { H2Component } from './h2/h2.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 const atomsComponents = [
   ButtonComponent,
@@ -28,6 +29,7 @@ const atomsComponents = [
   LabelComponent,
   ListGroupItemComponent,
   LoaderRingComponent,
+  LoadingSpinnerComponent,
 ]
 
 @NgModule({

@@ -10,6 +10,7 @@ import { Country } from '@app/modules/countries/interfaces/country.interface';
 export class ByCapitalPageComponent {
 
   public countries: Country[] = [];
+  public isLoading = false;
 
   typeSearch = 'capital';
 
@@ -18,9 +19,11 @@ export class ByCapitalPageComponent {
   }
 
   searchByCapital(termino: string) {
+    this.isLoading = true;
     this.countriesService.searchCountry(termino, this.typeSearch)
       .subscribe(countries => {
         this.countries = countries;
+        this.isLoading = false;
         console.log(countries);
       })
   }

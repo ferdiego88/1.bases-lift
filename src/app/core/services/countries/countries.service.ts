@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Country } from '@app/modules/countries/interfaces/country.interface';
 import { environment } from 'environments/environment';
-import { Observable, catchError, map, of } from 'rxjs';
+import { Observable, catchError, delay, map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +17,8 @@ private baseUrl = environment.BASE_COUNTRY_URL;
   searchCountry(term: string, type: string): Observable<Country[]> {
     return this.httpClient.get<Country[]>(`${this.baseUrl}/${type}/${term}`)
       .pipe(
-       catchError( error => {
-        console.log(error);
-        return  of([])
-       } )
+       catchError( () => of([])),
+       delay(2000)
       );
   }
 

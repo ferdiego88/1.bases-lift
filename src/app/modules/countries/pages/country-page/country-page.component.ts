@@ -44,10 +44,4 @@ export class CountryPageComponent implements OnInit {
       })
   }
 
-
-  // addElements(object: Translation[] | Languages[] | Currencies[]) {
-  //     for (let index = 0; index < object.length; index++) {
-  //       return
-  //     }
-  // }
 }

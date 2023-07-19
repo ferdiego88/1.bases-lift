@@ -15,6 +15,7 @@
 <div class="row">
   <div class="col">
     <hr>
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
       <app-country-table
       [captionTable]="'Capital'"
       [countries]="countries"
