@@ -20,24 +20,42 @@ public cacheStore: CacheStore = {
 }
 
   constructor(private httpClient: HttpClient) {
-
+  this.loadToLocalStorage();
   }
+
+ private loadToLocalStorage() {
+  if (!localStorage.getItem('cacheStore')) return;
+
+  this.cacheStore = JSON.parse(localStorage.getItem('cacheStore')!);
+
+ }
+
+ private saveToLocalStorage() {
+  localStorage.setItem('cacheStore', JSON.stringify(this.cacheStore));
+ }
+
 
   searchCountry(term: any, type: string): Observable<Country[]> {
     return this.httpClient.get<Country[]>(`${this.baseUrl}/${type}/${term}`)
       .pipe(
       tap(countries => {
-        if (type === 'capital') {
-          this.cacheStore.byCapital = {term, countries}
-        } else if(type === 'name') {
-          this.cacheStore.byCountries = {term, countries}
-        } else if(type === 'region') {
-          this.cacheStore.byRegion = {term,countries}
-        }
+        this.setCacheStore(type, term, countries);
       }),
+      tap( () => this.saveToLocalStorage()),
        catchError( () => of([])),
        delay(2000)
       );
+  }
+
+
+  setCacheStore(type: string, term: any, countries: Country[] ) {
+    if (type === 'capital') {
+      this.cacheStore.byCapital = {term, countries}
+    } else if (type === 'name') {
+      this.cacheStore.byCountries = {term, countries}
+    } else if (type === 'region') {
+      this.cacheStore.byRegion = {term,countries}
+    }
   }
 
   searchCountryByAlphaCode(code: string): Observable<Country | null> {
