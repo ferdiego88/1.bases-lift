@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'dragon-ball-z', loadChildren: () => import('./modules/dragon-ball-z/dragon-ball-z.module').then(m => m.DragonBallZModule) },
   { path: 'gifs', loadChildren: () => import('./modules/gifs/gifs.module').then(m => m.GifsModule) },
   { path: 'countries', loadChildren: () => import('./modules/countries/countries.module').then(m => m.CountriesModule) },
+  { path: 'pipes', loadChildren: () => import('./modules/pipes-app/pipes-app.module').then( m => m.PipesAppModule) }
 ];
 
 @NgModule({
