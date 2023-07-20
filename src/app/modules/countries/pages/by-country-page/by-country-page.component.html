@@ -5,11 +5,11 @@
 <hr>
 <div class="row">
   <div class="col">
-    <app-search-box
+    <app-search-box-debounce
     [placeholder]="'Buscar País...'"
-    (OnTextInput)="searchByCountry($event)"
+    (OnTextDebounceInput)="searchByCountry($event)"
     >
-    </app-search-box>
+    </app-search-box-debounce>
   </div>
 </div>
 <div class="row">

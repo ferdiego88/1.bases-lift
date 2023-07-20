@@ -11,6 +11,7 @@ export class ButtonComponent {
   @Input() typeButton = 'button';
   @Input() disabled = false;
   @Input() className = 'a-button';
+  @Input() ngClass: any;
   @Input() theme = '';
   @Input() icon = '';
   @Input() alt = '';

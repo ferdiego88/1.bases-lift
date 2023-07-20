@@ -4,12 +4,15 @@
 </app-h2>
 <hr>
 <div class="row">
-  <div class="col">
-    <app-search-box
-    [placeholder]="'Buscar Región...'"
-    (OnTextInput)="searchByRegion($event)"
-    >
-    </app-search-box>
+  <div class="text-center">
+   <app-button
+   *ngFor="let region of regions"
+   [textContent]="region"
+   (clicked)="searchByRegion(region)"
+   [className]="'btn a-button__region'"
+   [ngClass]="{'btn-primary': selectedRegion === region,'btn-outline-primary': selectedRegion !== region}"
+   >
+   </app-button>
   </div>
 </div>
 <div class="row">
