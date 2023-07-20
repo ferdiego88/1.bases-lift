@@ -4,6 +4,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project use the node version 16.16.0
 
+
+## Upload Page in GitHub Pages
+
+Documentation:
+https://www.npmjs.com/package/gh-pages-cli
+
+- ng deploy --base-href=https://ferdiego88.github.io/1.bases-lift/
+
+This command deploy in github pages
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
