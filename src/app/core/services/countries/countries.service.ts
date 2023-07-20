@@ -43,7 +43,7 @@ public cacheStore: CacheStore = {
       }),
       tap( () => this.saveToLocalStorage()),
        catchError( () => of([])),
-       delay(2000)
+       //delay(1000)
       );
   }
 
