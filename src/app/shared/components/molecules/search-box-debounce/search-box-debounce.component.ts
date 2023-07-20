@@ -25,6 +25,7 @@ export class SearchBoxDebounceComponent implements OnInit, OnDestroy  {
 
 
   @Input() placeholder = '';
+  @Input() inputValue = '';
   @Output() OnTextDebounceInput = new EventEmitter<string>();
 
   searchTerm (term: string):void {

@@ -8,6 +8,7 @@
     <app-search-box-debounce
     [placeholder]="'Buscar País...'"
     (OnTextDebounceInput)="searchByCountry($event)"
+    [inputValue]="initialValue"
     >
     </app-search-box-debounce>
   </div>

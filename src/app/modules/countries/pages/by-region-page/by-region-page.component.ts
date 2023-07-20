@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Country } from '@app/modules/countries/interfaces/country.interface';
 import { CountriesService } from '@app/core/services/countries/countries.service';
+import { Region } from '@app/modules/countries/interfaces/region.type';
 
-type Region = 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania';
+
 
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
   styleUrls: ['./by-region-page.component.scss']
 })
-export class ByRegionPageComponent {
+export class ByRegionPageComponent implements OnInit {
   public countries: Country[] = [];
 
   typeSearch = 'region';
@@ -19,6 +20,11 @@ export class ByRegionPageComponent {
 
   constructor(private countriesService: CountriesService) {
 
+  }
+
+  ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byRegion.countries;
+    this.selectedRegion = this.countriesService.cacheStore.byRegion.term;
   }
 
   searchByRegion(region: Region) {
