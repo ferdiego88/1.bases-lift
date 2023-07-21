@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+//PrimeNg Modules
+import { ButtonModule } from 'primeng/button';
+
 import { PipesAppRoutingModule } from './pipes-app-routing.module';
 import { PipesMainComponent } from './pages/pipes-main/pipes-main.component';
 
+const primeNgModules = [
+   ButtonModule,
+]
 
 @NgModule({
   declarations: [
@@ -11,7 +17,8 @@ import { PipesMainComponent } from './pages/pipes-main/pipes-main.component';
   ],
   imports: [
     CommonModule,
-    PipesAppRoutingModule
+    PipesAppRoutingModule,
+    primeNgModules,
   ]
 })
 export class PipesAppModule { }
