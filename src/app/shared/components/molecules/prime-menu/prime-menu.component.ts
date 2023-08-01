@@ -6,17 +6,31 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./prime-menu.component.scss']
 })
 export class PrimeMenuComponent implements OnInit {
-  items: MenuItem[] | undefined;
+  menuItems: MenuItem[] | undefined;
 
   ngOnInit() {
-      this.items = [
+      this.menuItems = [
           {
-              label: 'New',
-              icon: 'pi pi-fw pi-plus',
+              label: 'Pipes de Angular',
+              icon: 'pi pi-desktop',
+              items: [
+                {
+                  label: 'Textos y Fechas',
+                  icon: 'pi pi-align-left'
+                },
+                {
+                  label: 'Números',
+                  icon: 'pi pi-dollar'
+                },
+                {
+                  label: 'No comunes',
+                  icon: 'pi pi-globe'
+                },
+              ]
           },
           {
-              label: 'Delete',
-              icon: 'pi pi-fw pi-trash'
+              label: 'Pipes personalizados',
+              icon: 'pi pi-cog',
           }
       ];
   }

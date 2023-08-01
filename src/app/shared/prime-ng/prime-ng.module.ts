@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { MenuModule } from 'primeng/menu';
+import { MenubarModule } from 'primeng/menubar';
 
 const primeNgComponents = [
-  MenuModule
+  MenuModule,
+  MenubarModule,
 ]
 
 @NgModule({
