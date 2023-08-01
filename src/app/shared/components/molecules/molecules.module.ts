@@ -13,6 +13,8 @@ import { CardListComponent } from './card-list/card-list.component';
 import { RouterModule } from '@angular/router';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { SearchBoxDebounceComponent } from './search-box-debounce/search-box-debounce.component';
+import { PrimeMenuComponent } from './prime-menu/prime-menu.component';
+import { PrimeNgModule } from '@app/shared/prime-ng/prime-ng.module';
 
 const moleculesComponent = [
   BasicCounterComponent,
@@ -24,11 +26,13 @@ const moleculesComponent = [
   SidebarNavComponent,
   SearchBoxComponent,
   SearchBoxDebounceComponent,
+  PrimeMenuComponent,
 ]
 
 @NgModule({
   declarations: [
     ...moleculesComponent,
+
   ],
   imports: [
     CommonModule,
@@ -36,6 +40,7 @@ const moleculesComponent = [
     RouterModule,
     ReactiveFormsModule,
     AtomsModule,
+    PrimeNgModule,
   ],
   exports: [
     ...moleculesComponent
