@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-pipes-main',
@@ -7,4 +8,32 @@ import { Component } from '@angular/core';
 })
 export class PipesMainComponent {
 
+  menuItems: MenuItem[] | undefined =
+  [
+              {
+              label: 'Pipes de Angular',
+              icon: 'pi pi-desktop',
+              items: [
+                {
+                  label: 'Textos y Fechas',
+                  icon: 'pi pi-align-left',
+                  routerLink: '/pipes/main'
+                },
+                {
+                  label: 'Números',
+                  icon: 'pi pi-dollar',
+                  routerLink: 'numbers'
+                },
+                {
+                  label: 'No comunes',
+                  icon: 'pi pi-globe',
+                  routerLink: 'uncommon'
+                },
+              ]
+          },
+          {
+              label: 'Pipes personalizados',
+              icon: 'pi pi-cog',
+          }
+  ]
 }

@@ -1,6 +1,9 @@
 <div class="row">
   <div class="main__sidebar col-3">
-    <app-prime-menu></app-prime-menu>
+    <app-prime-menu
+    [menuItems]="menuItems"
+    >
+  </app-prime-menu>
   </div>
   <div class="col">
     <router-outlet></router-outlet>
