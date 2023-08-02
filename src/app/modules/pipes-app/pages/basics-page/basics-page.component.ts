@@ -9,6 +9,9 @@ export class BasicsPageComponent {
 
   nameLower = 'fernando';
   nameUpper = 'FERNANDO';
-  fullName = 'gIAnLucA sAnTiLlAN VAraS'
+  fullName = 'gIAnLucA sAnTiLlAN VAraS';
+
+  customDate = new Date();
+
 
 }
