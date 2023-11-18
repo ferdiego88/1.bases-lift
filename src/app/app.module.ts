@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,6 +8,16 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from '@modules/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+
+//Configuracion del locale de la app
+import localeEsPE from "@angular/common/locales/es-PE";
+import localeFrCA from "@angular/common/locales/fr-CA";
+
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeEsPE);
+registerLocaleData(localeFrCA);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +31,9 @@ import { CoreModule } from './core/core.module';
     RouterModule,
     AuthModule,
   ],
-  providers: [],
+  providers: [
+   { provide: LOCALE_ID, useValue: 'es-PE' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
