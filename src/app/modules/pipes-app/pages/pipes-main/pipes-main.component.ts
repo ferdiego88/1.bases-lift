@@ -34,6 +34,13 @@ export class PipesMainComponent {
           {
               label: 'Pipes personalizados',
               icon: 'pi pi-cog',
+              items: [
+                {
+                  label: 'Custom Pipes',
+                  icon: 'pi pi-cog',
+                  routerLink: 'custom'
+                },
+              ]
           }
   ]
 }
