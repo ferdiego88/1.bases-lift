@@ -6,6 +6,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
 import { MenubarModule } from 'primeng/menubar';
 import { ToolbarModule } from 'primeng/toolbar';
+import { TableModule } from 'primeng/table';
 
 const primeNgComponents = [
   MenuModule,
@@ -14,7 +15,8 @@ const primeNgComponents = [
   CardModule,
   FieldsetModule,
   PanelModule,
-  ToolbarModule
+  ToolbarModule,
+  TableModule
 ]
 
 @NgModule({
