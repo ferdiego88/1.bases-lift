@@ -7,6 +7,13 @@ import { interval, tap } from 'rxjs';
   styleUrls: ['./uncommon-page.component.scss']
 })
 export class UncommonPageComponent {
+  //i18n Select
+  public name = 'Fernando';
+  public gender :'male' | 'female' = 'male';
+  public invitationMap = {
+    'male': 'invitarlo',
+    'female': 'invitarla'
+  }
 
   //i18n Select
   public name = 'Fernando';
