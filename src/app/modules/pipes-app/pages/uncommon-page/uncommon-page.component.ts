@@ -15,17 +15,6 @@ export class UncommonPageComponent {
     'female': 'invitarla'
   }
 
-  //i18n Select
-  public name = 'Fernando';
-  public gender: 'male' | 'female' = 'male';
-
-  public invitationMap = {
-    'male' : 'invitarlo',
-    'female': 'invitarla'
-  }
-
-
-
   changeClient() {
     this.name = 'Melissa';
     this.gender = 'female';
