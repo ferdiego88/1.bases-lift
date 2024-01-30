@@ -7,6 +7,8 @@ import { RegisterComponent } from '@modules/auth/components/register/register.co
 import { CoreModule } from '@app/core/core.module';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { MaterialModule } from '@app/shared/material/material.module';
+import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     RegisterComponent,
     LoginPageComponent,
     RegisterPageComponent,
+    LayoutPageComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     AuthRoutingModule,
     CoreModule,
+    MaterialModule
   ],
   exports: [
     LoginComponent

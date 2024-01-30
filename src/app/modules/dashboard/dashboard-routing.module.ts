@@ -6,7 +6,7 @@ const routes: Routes = [
   {path: '', component: DashboardComponent,
    children: [
     { path: 'heroes', loadChildren: () => import('../heroes/heroes.module').then(m => m.HeroesModule) },
-    { path: '', loadChildren: () => import('../hello-world/hello-world.module').then(m => m.HelloWorldModule) },
+    { path: 'hola', loadChildren: () => import('../hello-world/hello-world.module').then(m => m.HelloWorldModule) },
     { path: 'dragon-ball-z', loadChildren: () => import('../dragon-ball-z/dragon-ball-z.module').then(m => m.DragonBallZModule) },
     { path: 'gifs', loadChildren: () => import('../gifs/gifs.module').then(m => m.GifsModule) },
     { path: 'countries', loadChildren: () => import('../countries/countries.module').then(m => m.CountriesModule) },
