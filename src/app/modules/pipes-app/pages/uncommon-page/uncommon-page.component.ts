@@ -52,7 +52,7 @@ export class UncommonPageComponent {
   )
  )
 
- public promiseValue: Promise<string> = new Promise((resolve, reject) => {
+ public promiseValue: Promise<string> = new Promise((resolve) => {
     setTimeout(() => {
       resolve('Tenemos data en la Promesa')
     }, 3500);

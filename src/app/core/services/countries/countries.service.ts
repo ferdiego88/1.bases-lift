@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CacheStore } from '@app/modules/countries/interfaces/cache-store.interface';
 import { Country } from '@app/modules/countries/interfaces/country.interface';
+import { Region } from '@app/modules/countries/interfaces/region.type';
 import { environment } from 'environments/environment';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { Observable, catchError, delay, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,9 @@ export class CountriesService {
 private readonly baseUrl = environment.BASE_COUNTRY_URL;
 
 public cacheStore: CacheStore = {
-  byCapital:   {term: '', countries: []},
-  byCountries: {term: '', countries: []},
-  byRegion:    {term: '', countries: []},
+  byCapital: { term: '', countries: [] },
+  byCountries: { term: '', countries: [] },
+  byRegion: { termino: '' as Region, countries: [] }
 }
 
   constructor(private readonly httpClient: HttpClient) {
@@ -25,7 +26,8 @@ public cacheStore: CacheStore = {
  private loadToLocalStorage() {
   if (!localStorage.getItem('cacheStore')) return;
 
-  this.cacheStore = JSON.parse(localStorage.getItem('cacheStore')!);
+  const cacheStore = localStorage.getItem('cacheStore');
+  this.cacheStore = cacheStore ? JSON.parse(cacheStore) : this.cacheStore;
 
  }
 
@@ -34,7 +36,7 @@ public cacheStore: CacheStore = {
  }
 
 
-  searchCountry(term: any, type: string): Observable<Country[]> {
+  searchCountry(term: string, type: string): Observable<Country[]> {
     return this.httpClient.get<Country[]>(`${this.baseUrl}/${type}/${term}`)
       .pipe(
       tap(countries => {
@@ -42,18 +44,19 @@ public cacheStore: CacheStore = {
       }),
       tap( () => this.saveToLocalStorage()),
        catchError( () => of([])),
-       //delay(1000)
+       delay(1000)
       );
   }
 
 
-  setCacheStore(type: string, term: any, countries: Country[] ) {
+  setCacheStore(type: string, term: string, countries: Country[] ) {
     if (type === 'capital') {
       this.cacheStore.byCapital = {term, countries}
     } else if (type === 'name') {
       this.cacheStore.byCountries = {term, countries}
-    } else if (type === 'region') {
-      this.cacheStore.byRegion = {term,countries}
+    } else if (type === 'region' && typeof term === 'string') {
+      const termino = term as Region;
+      this.cacheStore.byRegion = {termino,countries}
     }
   }
 

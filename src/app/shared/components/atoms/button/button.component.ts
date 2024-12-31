@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgClassType } from '@app/shared/types/class.types';
+
 
 @Component({
   selector: 'app-button',
@@ -11,7 +13,7 @@ export class ButtonComponent {
   @Input() typeButton = 'button';
   @Input() disabled = false;
   @Input() className = 'a-button';
-  @Input() ngClass: any;
+  @Input() ngClass: NgClassType;
   @Input() theme = '';
   @Input() icon = '';
   @Input() alt = '';

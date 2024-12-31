@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Country } from '@app/modules/countries/interfaces/country.interface';
 import { CountriesService } from '@app/core/services/countries/countries.service';
+import { Country } from '@app/modules/countries/interfaces/country.interface';
 
 @Component({
   selector: 'app-by-country-page',
@@ -13,7 +13,7 @@ export class ByCountryPageComponent implements OnInit {
 
   typeSearch = 'name';
 
-  constructor(private countriesService: CountriesService) {
+  constructor(private readonly countriesService: CountriesService) {
 
   }
   ngOnInit(): void {
