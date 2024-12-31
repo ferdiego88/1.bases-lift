@@ -8,10 +8,10 @@ import { MenuItem } from 'primeng/api';
 })
 export class PipesMainComponent {
 
-  menuItems: MenuItem[] | undefined =
+  menuItems: MenuItem[] =
   [
               {
-              label: 'Pipes de Angular',
+              label: 'Pipes en Angular',
               icon: 'pi pi-desktop',
               items: [
                 {

@@ -1,9 +1,12 @@
  /* Breakpoints */
- $small: 440px; /*-------- Mobile devices*/
- $s-medium: 570px; /*-------- Tablet devices*/
+ $small: 440px;
+ /*-------- Mobile devices*/
+ $s-medium: 570px;
+ /*-------- Tablet devices*/
  $medium: 768px;
  $large: 960px;
- $x-large: 1060px; /*-------- Desktop devices*/
+ $x-large: 1060px;
+ /*-------- Desktop devices*/
  $xx-large: 1250px;
  $xxx-large: 1440px;
  $high-quality: 1700px;
@@ -17,42 +20,43 @@
  $z-top: 100;
  $z-super: 200;
 
-  /* Colors - Static*/
-  $magenta: #FF277E;
-  $white: #FFFFFF;
-  $coconut: #f9f9f9;
-  $silver: #d5d5d5;
-  $faded-gray: #A0A0A0;
-  $dove-gray: #6C6F84;
-  $dark-gray: #292929;
+ /* Colors - Static*/
+ $magenta: #FF277E;
+ $white: #FFFFFF;
+ $coconut: #f9f9f9;
+ $silver: #d5d5d5;
+ $faded-gray: #A0A0A0;
+ $dove-gray: #6C6F84;
+ $dark-gray: #292929;
+ $black: #0000;
 
-  /* Variables */
-  $heebo-extrabold: "Heebo-ExtraBold";
-  $heebo-bold: "Heebo-Bold";
-  $heebo-medium: "Heebo-Medium";
-  $heebo-regular: "Heebo-Regular";
-  $roboto-bold: "Roboto-Bold";
-  $roboto-medium: "Roboto-Medium";
+ /* Variables */
+ $heebo-extrabold: "Heebo-ExtraBold";
+ $heebo-bold: "Heebo-Bold";
+ $heebo-medium: "Heebo-Medium";
+ $heebo-regular: "Heebo-Regular";
+ $roboto-bold: "Roboto-Bold";
+ $roboto-medium: "Roboto-Medium";
 
-  // Vars Colors
-:root {
-  --background-button: hsla(0, 0%, 100%, 0.05);
-  --color-primary: hsl(260, 94%, 57%);
-  --color-secondary: hsl(260, 86%, 66%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-background: hsl(262, 72%, 13%);
-  --color-line: hsl(261, 67%, 43%);
-  --purple: hsl(267, 100%, 30%);
-  --white: hsl(240, 12%, 92%);
-  --gray: hsl(0, 0%, 85%);
-  --green: hsl(162, 100%, 36%);
-  --green-shadow: hsl(162, 100%, 55%);
-  --red: hsl(346, 100%, 46%);
-  --red-shadow: hsl(346, 100%, 66%);
-  --font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  --body-bg-rgb: 255,255,255;
-  --primary-rgb: 13,110,253;
-  --accent-rgb: 255,228,132;
-  --violet-rgb: 112.520718,44.062154,249.437846;
-  --pink-rgb: 214,51,132;
-}
+ // Vars Colors
+ :root {
+   --background-button: hsla(0, 0%, 100%, 0.05);
+   --color-primary: hsl(260, 94%, 57%);
+   --color-secondary: hsl(260, 86%, 66%);
+   --color-white: hsl(0, 0%, 100%);
+   --color-background: hsl(262, 72%, 13%);
+   --color-line: hsl(261, 67%, 43%);
+   --purple: hsl(267, 100%, 30%);
+   --white: hsl(240, 12%, 92%);
+   --gray: hsl(0, 0%, 85%);
+   --green: hsl(162, 100%, 36%);
+   --green-shadow: hsl(162, 100%, 55%);
+   --red: hsl(346, 100%, 46%);
+   --red-shadow: hsl(346, 100%, 66%);
+   --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   --body-bg-rgb: 255, 255, 255;
+   --primary-rgb: 13, 110, 253;
+   --accent-rgb: 255, 228, 132;
+   --violet-rgb: 112.520718, 44.062154, 249.437846;
+   --pink-rgb: 214, 51, 132;
+ }

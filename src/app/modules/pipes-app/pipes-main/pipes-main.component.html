@@ -1,0 +1,18 @@
+<section class="main">
+  <div class="row">
+    <div class="col">
+      <app-prime-menu-bar [menuItems]="menuItems"></app-prime-menu-bar>
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div class="main__sidebar col-3">
+      <app-prime-menu
+      [menuItems]="menuItems"
+      >
+    </app-prime-menu>
+    </div> -->
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
