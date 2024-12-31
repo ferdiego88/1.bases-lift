@@ -2,16 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CacheStore } from '@app/modules/countries/interfaces/cache-store.interface';
 import { Country } from '@app/modules/countries/interfaces/country.interface';
-import { Region } from '@app/modules/countries/interfaces/region.type';
 import { environment } from 'environments/environment';
-import { Observable, catchError, delay, map, of, tap } from 'rxjs';
+import { Observable, catchError, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountriesService {
 
-private baseUrl = environment.BASE_COUNTRY_URL;
+private readonly baseUrl = environment.BASE_COUNTRY_URL;
 
 public cacheStore: CacheStore = {
   byCapital:   {term: '', countries: []},
@@ -19,7 +18,7 @@ public cacheStore: CacheStore = {
   byRegion:    {term: '', countries: []},
 }
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private readonly httpClient: HttpClient) {
   this.loadToLocalStorage();
   }
 

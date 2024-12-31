@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainHeroesComponent } from './pages/main-heroes/main-heroes.component';
+import { MainHeroesComponent } from './main-heroes/main-heroes.component';
+import { HeroPageComponent } from './pages/hero-page/hero-page.component';
+import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
-import { ListPageComponent } from './pages/list-page/list-page.component';
-import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 
 
 const routes: Routes = [
